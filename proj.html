@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+ <html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>COMPANY</title>
+        <style type="text/css">
+            #para1
+                {
+                    border:solid thick black;
+                    background-color:cyan;
+                    position:absolute;
+                    top:200px;
+                    left:250px;
+                    z-index:0;
+                }
+            #para2
+                {
+                    border:solid thick black;
+                    background-color:olive;
+                    position:absolute;
+                    top:220px;
+                    left:280px;
+                    z-index:0;
+                }
+            #para3
+                {
+                    border:solid thick black;
+                    background-color:silver;
+                    
+                    position:absolute;
+                    top:240px;
+                    left:310px;
+                    z-index:0;
+                }
+        </style>
+</head>
+    <body>
+        <script type=text/javascript>
+            var topLayer="para1";
+            function mover(toTop)
+                {
+                    document.getElementById(topLayer).style.zIndex="0";
+                    document.getElementById(toTop).style.zIndex="1";
+                    topLayer=toTop;
+                }
+        </script>
+        <pre id=para1 onMouseOver=mover('para1');>
+        <b>ONE PERSON COMPANY</b>
+        OPC or one person company is a new category of company introduced     
+        to encourage startups and young entrepreneurs wherein a single      
+        person can incorporate the entity. It also promotes the concept     
+        of corporatization of the business.
+        </pre>
+        <pre id=para2 onMouseOver=mover('para2');>
+        <b>PRIVATE COMPANY</b>
+        A private company is one in which two or more persons get the          
+        company registered under the Companies Act. The securities of          
+        such a company are not listed on a recognised stock exchange,          
+        and they cannot invite the public to subscribe for the shares.
+        </pre>
+        <pre id=para3 onMouseOver=mover('para3');>
+        <b>PUBLIC COMPANY</b>
+        A company which is formed by a minimum number of seven members          
+        with a lawful object is termed as a public company. Its securities 
+        are listed on a recognized stock exchange, and its shares are 
+        freely transferable.
+        </pre>
+    </body>
+ </html>
